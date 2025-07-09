@@ -11,7 +11,7 @@ db.exec(`
 `)
 
 db.exec(`
-    CREATE TAVLE todos (
+    CREATE TABLE todos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
         task TEXT,
