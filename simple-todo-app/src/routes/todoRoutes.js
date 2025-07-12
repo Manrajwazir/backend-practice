@@ -39,6 +39,6 @@ router.delete('/:id', (req, res) => {
     deleteTodo.run(id, userId)
     
     res.send({ message: "Todo deleted" })
-})
+}) 
 
 export default router

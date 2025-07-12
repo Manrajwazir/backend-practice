@@ -18,3 +18,6 @@ Content-Type: application/json
     "username": "gilgamesh@gmail.com",
     "password": "123123123"
 }
+### fetch all todos GET /TODOS
+Get http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUyMjk4MjQ1LCJleHAiOjE3NTIzODQ2NDV9.HXIgkzTngRJsMpsGLxaKtyZOqjfrRzySW75ZBIhzYJE
