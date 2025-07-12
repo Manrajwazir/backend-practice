@@ -6,21 +6,20 @@ import todoRoutes from './routes/todoRoutes.js'
 import authMiddleware from './middleware/authMiddleware.js'
 
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5003
 
-// Get the file path from the url of the current module
+// Get the file path from the URL of the current module
 const __filename = fileURLToPath(import.meta.url)
-// get the directory name from the file path
+// Get the directory name from the file path
 const __dirname = dirname(__filename)
 
-// middleware
+// Middleware
 app.use(express.json())
-// serve the html file from the /public directory
-// tells express to servce all files from the public folder as static assets/ files
-// any requests for the css files will be resolved to the public directory.
+// Serves the HTML file from the /public directory
+// Tells express to serve all files from the public folder as static assets / file. Any requests for the css files will be resolved to the public directory.
 app.use(express.static(path.join(__dirname, '../public')))
 
-// serving up the html file from the /publiv public directory
+// Serving up the HTML file from the /public directory
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })

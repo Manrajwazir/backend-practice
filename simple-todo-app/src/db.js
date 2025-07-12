@@ -1,7 +1,7 @@
 import { DatabaseSync } from 'node:sqlite'
 const db = new DatabaseSync(':memory:')
 
-// execute SQL statemnts from strings
+// Execute SQL statements from strings
 db.exec(`
     CREATE TABLE users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,7 @@ db.exec(`
         task TEXT,
         completed BOOLEAN DEFAULT 0,
         FOREIGN KEY(user_id) REFERENCES users(id)
-    )
+    )    
 `)
 
 export default db
